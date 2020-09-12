@@ -34,5 +34,7 @@ $ npm start
 - CSS
 - Javascript
 - Material-ui
+- Leaflet
+- Chart.js
 - Mathdro.id API
 - disease.sh API
