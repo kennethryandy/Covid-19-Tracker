@@ -1,0 +1,42 @@
+.app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.title {
+  font-weight: 600;
+  margin: 20px 2% 10px 2%;
+  align-self: start;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+  margin: auto;
+}
+
+@media (max-width: 576px) {
+  .title {
+    margin: 15px 2% 7px 2%;
+    align-self: start;
+    font-size: 1.5rem !important;
+  }
+  .logo {
+    width: 25px;
+    height: auto;
+    margin: auto;
+  }
+}
+
+.grid {
+  width: 100%;
+}
+
+.diagramTitle {
+  margin: 35px auto !important;
+  display: flex;
+  place-content: center;
+}
