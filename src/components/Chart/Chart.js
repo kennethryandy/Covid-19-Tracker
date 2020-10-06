@@ -16,7 +16,6 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
     };
     fetchedDailyData();
   }, []);
-
   const barChart = confirmed ? (
     <Bar
       data={{
@@ -40,7 +39,7 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
     />
   ) : null;
 
-  const lineChart = dailyData.length ? (
+  const lineChart = dailyData?.length ? (
     <Line
       data={{
         labels: dailyData.map((date) => date.date),
@@ -62,13 +61,12 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
       }}
     />
   ) : null;
-
   if (loading) {
     return <img alt="loading" style={{ margin: "auto" }} src={loadingSvg} />;
   }
 
   return (
-    <div style={{ margin: "auto", height: "100%" }}>
+    <div style={{ margin: "auto", height: "100%", width: "100%" }}>
       {country ? barChart : lineChart}
     </div>
   );

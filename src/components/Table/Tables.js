@@ -69,7 +69,7 @@ const Tables = () => {
     //eslint-disable-next-line
   }, []);
   return (
-    countries.length === 215 && (
+    countries.length >= 215 && (
       <TableContainer className={classes.tableContainer}>
         <Table size="small" className={classes.table}>
           <TableHead>
