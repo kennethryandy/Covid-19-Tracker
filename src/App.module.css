@@ -7,9 +7,10 @@
 }
 
 .title {
-  font-weight: 600;
-  margin: 20px 2% 10px 2%;
   align-self: start;
+  display: flex;
+  align-items: center;
+  margin: 16px !important;
 }
 
 .logo {

@@ -55,14 +55,17 @@ const WorldMap = ({ country }) => {
   }, []);
   const getLocation = ({ coords }) => {
     setPosition({ lat: coords.latitude, lng: coords.longitude });
+    setZoom(5);
   };
   useEffect(() => {
     if (country && countries.length > 0) {
       const selectedCountry = countries.find(
         (name) => name.country === country
       );
-      setZoom(6);
-      setPosition({ lat: selectedCountry.lat, lng: selectedCountry.lng });
+      if (selectedCountry) {
+        setZoom(6);
+        setPosition({ lat: selectedCountry.lat, lng: selectedCountry.lng });
+      }
     } else {
       setZoom(3);
       setPosition({ lat: 34.80746, lng: -40.4796 });

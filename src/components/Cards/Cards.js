@@ -1,18 +1,18 @@
 import React from "react";
 import CountUp from "react-countup";
-import loading from '../../assets/loading.svg'
+import loading from "../../assets/loading.svg";
 //Material-ui
 import { Card, CardContent, Typography, Grid } from "@material-ui/core";
-import cardsStyles from './cardsStyles'
+import cardsStyles from "./cardsStyles";
 
 const Cards = ({ data: { confirmed, deaths, recovered, lastUpdate } }) => {
-  const classes = cardsStyles()
+  const classes = cardsStyles();
   if (!confirmed) {
     return <img alt="loading" src={loading} />;
   }
   return (
     <div className={classes.container}>
-      <Grid container spacing={3} justify="space-around">
+      <Grid container justify="space-around">
         {/* CONFIRMED CARD */}
         <Grid
           item
